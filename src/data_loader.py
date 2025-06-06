@@ -26,8 +26,8 @@ class DataLoader:
             DataFrame или None в случае ошибки
         """
         try:
-            # Загружаем Excel файл
-            self.df = pd.read_excel(uploaded_file)
+            # Загружаем Excel файл, заголовки во второй строке (header=1)
+            self.df = pd.read_excel(uploaded_file, header=1)
             
             # Валидация данных
             if self._validate_data():
