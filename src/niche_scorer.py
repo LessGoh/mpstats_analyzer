@@ -45,11 +45,11 @@ class NicheScorer:
         )
         
         df_scored['Балл_Товары_движение'] = df_scored.apply(
-            lambda row: self._get_score_for_metric('процент_товаров_с_движением', row['Процент товаров с движением']), axis=1
+            lambda row: self._get_score_for_metric('процент_товаров_с_движением', row['% товаров с движением']), axis=1
         )
         
         df_scored['Балл_Продавцы'] = df_scored.apply(
-            lambda row: self._get_score_for_metric('процент_продавцов_с_продажами', row['Процент продавцов с продажами']), axis=1
+            lambda row: self._get_score_for_metric('процент_продавцов_с_продажами', row['% продавцов с продажами']), axis=1
         )
         
         df_scored['Балл_Выручка_продавца'] = df_scored.apply(
